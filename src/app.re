@@ -1,21 +1,61 @@
 [%bs.raw {|require('./app.css')|}];
 
-[@bs.module] external logo : string = "./logo.svg";
+type route =
+  | Home
+  | Chef
+  | Menu;
 
-let component = ReasonReact.statelessComponent("App");
+type state = {route};
 
-let make = (~message, _children) => {
+type action =
+  | ChangeRoute(route);
+
+let mapUrlToRoute = (url: ReasonReact.Router.url) =>
+  switch url.path {
+  | [] => Home
+  | ["chef"] => Chef
+  | ["menu"] => Menu
+  | _ => Home
+  };
+
+let reducer = (action, _state) =>
+  switch action {
+  | ChangeRoute(route) => ReasonReact.Update({route: route})
+  };
+
+let component = ReasonReact.reducerComponent("App");
+
+let make = (_children) => {
   ...component,
-  render: (_self) =>
+  reducer,
+  initialState: () => {route: Home},
+  subscriptions: (self) => [
+    Sub(
+      () => ReasonReact.Router.watchUrl((url) => self.send(ChangeRoute(url |> mapUrlToRoute))),
+      ReasonReact.Router.unwatchUrl
+    )
+  ],
+  render: (self) => {
+    let pageDisplayed = 
+      switch (self.state.route) {
+      | Home => <ChefPage />
+      | Chef => <ChefPage />
+      | Menu => <MenuPage />
+      };
+
     <div className="App">
-      <div className="App-header">
-        <img src=logo className="App-logo" alt="logo" />
-        <h2> (ReasonReact.stringToElement(message)) </h2>
+      <h1>{ReasonReact.stringToElement("Reason Projects")}</h1>
+      <div>
+        <ul>
+          <li>
+            <Link href="chef">{ReasonReact.stringToElement("Le Chef")}</Link>
+          </li>
+          <li>
+            <Link href="menu">{ReasonReact.stringToElement("Le Menu")}</Link>
+          </li>
+        </ul>
       </div>
-      <p className="App-intro">
-        (ReasonReact.stringToElement("To get started, edit"))
-        <code> (ReasonReact.stringToElement(" src/app.re ")) </code>
-        (ReasonReact.stringToElement("and save to reload."))
-      </p>
+      {pageDisplayed}
     </div>
+  }
 };

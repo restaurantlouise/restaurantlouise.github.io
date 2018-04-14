@@ -56,6 +56,7 @@ let make = (_children) => {
         </ul>
       </div>
       {pageDisplayed}
+      <Footer />
     </div>
   }
 };

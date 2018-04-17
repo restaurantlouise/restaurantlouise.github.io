@@ -1,0 +1,32 @@
+.home-page {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-container {
+  background: url(../bg_louise.jpg) no-repeat center fixed;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.home-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000026;
+  opacity: 0.75;
+}
+
+.home-page .louise-icon {
+  height: 25em;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  z-index: 2;
+}

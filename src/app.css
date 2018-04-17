@@ -1,19 +1,17 @@
-.footer {
-  display: flex;
-  color: white;
-  background-color: black;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
+@import url("rsc/style/footer.css");
+@import url("rsc/style/home.css");
+@import url("rsc/style/navigation-menu.css");
+
+@font-face {
+  font-family: 'Tangerine';
+  src: local('Tangerine-Regular'), url(./rsc/Tangerine-Regular.ttf) format('truetype');
 }
 
-.fb-icon {
-  height: 30px;
-  width: 30px;
+@font-face {
+  font-family: 'TangerineBold';
+  src: local('Tangerine-Bold'), url(./rsc/Tangerine-Bold.ttf) format('truetype');
 }
 
-.insta-icon {
-  height: 30px;
-  width: 30px;
+body .App {
+  font-family: "Tangerine",Arial, Helvetica, sans-serif
 }

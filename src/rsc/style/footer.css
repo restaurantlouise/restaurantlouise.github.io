@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  color: white;
+  background-color: #02022b;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  font-size: 1.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.fb-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.insta-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.fb-icon-container {
+  display: flex;
+}

@@ -36,25 +36,15 @@ let make = (_children) => {
     )
   ],
   render: (self) => {
-    let pageDisplayed = 
+    let pageDisplayed =
       switch (self.state.route) {
-      | Home => <ChefPage />
+      | Home => <HomePage />
       | Chef => <ChefPage />
       | Menu => <MenuPage />
       };
 
     <div className="App">
-      <h1>{ReasonReact.stringToElement("Reason Projects")}</h1>
-      <div>
-        <ul>
-          <li>
-            <Link href="chef">{ReasonReact.stringToElement("Le Chef")}</Link>
-          </li>
-          <li>
-            <Link href="menu">{ReasonReact.stringToElement("Le Menu")}</Link>
-          </li>
-        </ul>
-      </div>
+      <NavigationMenu />
       {pageDisplayed}
       <Footer />
     </div>

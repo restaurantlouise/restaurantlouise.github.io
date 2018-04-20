@@ -12,6 +12,12 @@
   padding-bottom: 0.3em;
 }
 
+.social {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+}
+
 .fb-icon {
   height: 30px;
   width: 30px;
@@ -20,8 +26,4 @@
 .insta-icon {
   height: 30px;
   width: 30px;
-}
-
-.fb-icon-container {
-  display: flex;
 }

@@ -11,7 +11,7 @@ let make = (~menuColor, _children) => {
         <Link href="chef">{ReasonReact.stringToElement("Le Chef")}</Link>
       </span> */
       <span className="nav-link menu">
-        <Link href="menu" color=menuColor>{ReasonReact.stringToElement("Les Menus")}</Link>
+        <Link href="menus" color=menuColor>{ReasonReact.stringToElement("Les Menus")}</Link>
       </span>
       <span className="nav-link booking">
         <Link href="reservations" color=menuColor>{ReasonReact.stringToElement({js|Réservations|js})}</Link>

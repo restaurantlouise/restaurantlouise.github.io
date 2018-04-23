@@ -15,10 +15,10 @@ let mapUrlToRoute = (url: ReasonReact.Router.url) =>
   switch url.path {
   | [] => Home
   | ["chef"] => Chef
-  | ["menu"] => Menu
+  | ["menus"] => Menu
   | ["reservations"] => Booking
   | ["louise-website", "chef"] => Chef
-  | ["louise-website", "menu"] => Menu
+  | ["louise-website", "menus"] => Menu
   | ["louise-website", "reservations"] => Booking
   | _ => Home
   };
@@ -46,12 +46,12 @@ let make = (_children) => {
       | Home => <HomePage />
       | Chef => <ChefPage />
       | Menu => <MenuPage />
-      | Booking => <HomePage />
+      | Booking => <Booking />
       };
     let menuColor = if (self.state.route === Home) {
       "white"
     } else {
-      "black"
+      "#02022b"
     };
 
     <div className="App">

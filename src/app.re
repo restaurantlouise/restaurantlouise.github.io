@@ -45,7 +45,7 @@ let make = (_children) => {
       switch (self.state.route) {
       | Home => <HomePage />
       | Chef => <ChefPage />
-      | Menu => <MenuPage />
+      | Menu => <Menu />
       | Booking => <Booking />
       };
     let menuColor = if (self.state.route === Home) {

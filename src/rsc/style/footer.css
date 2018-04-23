@@ -3,7 +3,7 @@
   color: white;
   background-color: #02022b;
   justify-content: space-around;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   align-items: center;

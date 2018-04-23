@@ -26,3 +26,8 @@
     font-size: 2em;
   }
 }
+
+/* hack for reversed phone */
+.phone {
+  padding-bottom: 4em;
+}

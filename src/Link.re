@@ -8,7 +8,15 @@ let handleClick = (href, event) =>
     ReasonReact.Router.push(href)
   };
 
-let make = (~href, children) => {
+let make = (~color, ~href, children) => {
   ...component,
-  render: (_self) => ReasonReact.createDomElement("a", ~props={"href": href, "onClick": handleClick(href)}, children)
+  render: (_self) => ReasonReact.createDomElement(
+    "a",
+    ~props={
+      "href": href,
+      "onClick": handleClick(href),
+      "style": {color: color}
+    },
+    children
+  )
 };

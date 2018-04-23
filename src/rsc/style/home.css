@@ -27,8 +27,14 @@
 }
 
 .home-page .louise-icon {
-  height: 25em;
+  height: 15em;
   filter: invert(100%);
   -webkit-filter: invert(100%);
   z-index: 2;
+}
+
+@media screen and (min-width: 900px) {
+  .home-page .louise-icon {
+    height: 25em;
+  }
 }

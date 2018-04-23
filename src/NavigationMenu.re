@@ -1,20 +1,20 @@
 let component = ReasonReact.statelessComponent("NavigationMenu");
 
-let make = (_children) => {
+let make = (~menuColor, _children) => {
   ...component,
   render: (_self) => {
     <div className="navigation-menu">
       <span className="nav-link home">
-        <Link href="home">{ReasonReact.stringToElement("Accueil")}</Link>
+        <Link href="home" color=menuColor>{ReasonReact.stringToElement("Accueil")}</Link>
       </span>
-      <span className="nav-link chef">
+      /* <span className="nav-link chef">
         <Link href="chef">{ReasonReact.stringToElement("Le Chef")}</Link>
-      </span>
+      </span> */
       <span className="nav-link menu">
-        <Link href="menu">{ReasonReact.stringToElement("Les Menus")}</Link>
+        <Link href="menu" color=menuColor>{ReasonReact.stringToElement("Les Menus")}</Link>
       </span>
-      <span className="nav-link contacts">
-        <Link href="contacts">{ReasonReact.stringToElement("Contacts")}</Link>
+      <span className="nav-link booking">
+        <Link href="reservations" color=menuColor>{ReasonReact.stringToElement({js|Réservations|js})}</Link>
       </span>
     </div>
   }

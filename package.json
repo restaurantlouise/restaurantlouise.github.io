@@ -19,6 +19,6 @@
     "eject": "react-scripts eject",
     "prepare": "npm link bs-platform",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -b master"
   }
 }

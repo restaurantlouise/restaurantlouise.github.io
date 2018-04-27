@@ -1,0 +1,15 @@
+.menus .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 900px) {
+  .menus .menu:nth-child(odd) {
+    flex-direction: row;
+  }
+  .menus .menu:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}

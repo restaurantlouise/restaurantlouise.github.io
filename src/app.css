@@ -1,6 +1,8 @@
 @import url("rsc/style/booking.css");
 @import url("rsc/style/footer.css");
 @import url("rsc/style/home.css");
+@import url("rsc/style/menus.css");
+@import url("rsc/style/menu-item.css");
 @import url("rsc/style/navigation-menu.css");
 
 @font-face {

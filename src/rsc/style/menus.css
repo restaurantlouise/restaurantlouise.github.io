@@ -1,0 +1,6 @@
+.menus {
+  display: flex;
+  margin-top: 4em;
+  margin-bottom: 6em;
+  flex-direction: column;
+}

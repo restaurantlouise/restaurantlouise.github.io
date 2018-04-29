@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 @media screen and (min-width: 900px) {
@@ -11,5 +11,36 @@
   }
   .menus .menu:nth-child(even) {
     flex-direction: row-reverse;
+  }
+}
+
+.menu .title {
+  font-size: 3.5em;
+  margin-top: .4em;
+  margin-bottom: .4em;
+}
+
+.menu .condition {
+  font-size: 1.8em;
+  margin-top: -.8em;
+  margin-bottom: .6em;
+}
+
+.menu .menu-element {
+  font-size: 2.5em;
+  margin-top: .2em;
+  margin-bottom: .2em;
+}
+
+
+@media screen and (min-width: 900px) {
+  .menu .title {
+    font-size: 3em;
+  }
+  .menu .condition {
+    font-size: 1.5em;
+  }
+  .menu .menu-element {
+    font-size: 2em;
   }
 }

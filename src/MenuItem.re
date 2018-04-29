@@ -8,7 +8,9 @@ let make = (~menu: Menus.menu, _children) =>
     render: (_self) => {
       <div className={"menu " ++ String.lowercase(menu.title)}>
         <div className="text">
-          <h3 className="title">{ReasonReact.stringToElement(menu.title)}</h3>
+          <h3 className="title">{ReasonReact.stringToElement(
+            menu.title ++ {js| • |js} ++ string_of_int(menu.price) ++ {js|€|js}
+          )}</h3>
           (
             switch menu.condition {
               | None => ReasonReact.nullElement
@@ -17,7 +19,9 @@ let make = (~menu: Menus.menu, _children) =>
           )
           (
             ReasonReact.arrayToElement(Array.of_list(
-              List.map((item) => <div>{ReasonReact.stringToElement(item)}</div>, menu.elements)
+              List.map((item) => <div key=item className="menu-element">
+                {ReasonReact.stringToElement(item)}
+              </div>, menu.elements)
             ))
           )
         </div>

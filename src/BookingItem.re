@@ -8,7 +8,7 @@ let make = (~title, ~lines, ~styleClassName, _children) =>
         <h2 className="title">{ReasonReact.stringToElement(title)}</h2>
         (
           ReasonReact.arrayToElement(Array.of_list(
-              List.map((item) => <span>{ReasonReact.stringToElement(item)}</span>, lines)
+              List.map((item) => <span key=item>{ReasonReact.stringToElement(item)}</span>, lines)
           ))
         )
       </div>

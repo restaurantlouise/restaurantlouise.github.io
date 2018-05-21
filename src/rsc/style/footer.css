@@ -1,4 +1,5 @@
 .footer {
+  font-family: "Economica",Arial,Helvetica,sans-serif;
   display: flex;
   color: white;
   background-color: #02022b;
@@ -7,9 +8,15 @@
   bottom: 0;
   width: 100%;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
+}
+
+@media screen and (max-width: 640px) {
+  .address {
+    display: none
+  }
 }
 
 .social {

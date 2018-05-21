@@ -3,7 +3,7 @@ let component = ReasonReact.statelessComponent("Booking");
 let timesTitle = "Horaires";
 let timesOpenDays = "Ouvert du mardi au samedi";
 let timesDay = "Midi: 12h00 - 13h30";
-let timesNight = "Soir: 19h00 - 21h30";
+let timesNight = "Soir: 19h30 - 21h00";
 let timesClosedDays = {js|Fermé le dimanche et le lundi|js};
 
 let addressTitle = "Adresse";
@@ -12,7 +12,6 @@ let addressCity = "56100 Lorient";
 
 let phoneTitle = {js|Réservations|js};
 let phoneNumber = {js|Par téléphone, au 02 97 84 72 12|js};
-let phoneTimes = {js|Nous sommes disponibles de 10h à 12h et de 18h à 20h|js};
 
 let make = (_children) => {
   ...component,
@@ -33,7 +32,7 @@ let make = (_children) => {
       <div className="phone-map">
         <BookingItem
             title=phoneTitle
-            lines=[phoneNumber, phoneTimes]
+            lines=[phoneNumber]
             styleClassName="phone"
         />
       </div>

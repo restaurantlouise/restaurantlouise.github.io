@@ -1,5 +1,6 @@
 .navigation-menu {
   display: flex;
+  font-family: "Economica",Arial,Helvetica,sans-serif;
   justify-content: flex-end;
   position: absolute;
   top: 1em;
@@ -15,13 +16,14 @@
 .nav-link {
   margin: 0 0.5em 0 0.5em;
 }
+
+.nav-link > a {
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
 @media screen and (min-width: 640px) {
   .nav-link {
     margin: 0 1em 0 1em;
   }
-}
-
-.nav-link > a {
-  text-decoration: none;
-  font-size: 1.8em;
 }

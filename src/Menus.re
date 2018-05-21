@@ -19,9 +19,9 @@ let issole = {
   price: 55,
   condition: None,
   elements: [
-    "Langoustines juste saisies, asperges et amandes",
-    {js|Filet de veau rôti, petits pois, morilles, jus court ...|js},
-    {js|Entremet chocolat-café, crème glacée au Baileys|js}
+    {js|L’araignée de mer, crémeuse et iodée|js},
+    {js|Magret de canard, carottes nouvelles et jus court comme une vinaigrette|js},
+    {js|Les premières fraises et rhubarbes, crème glacée au poivre de Tasmanie|js}
   ],
   image: Some("louise_dessert_2_600.jpg")
 };
@@ -31,10 +31,10 @@ let tadorne = {
   price: 85,
   condition: None,
   elements: [
-    "Langoustines juste saisies, asperges et amandes",
-    {js|Blanc de turbot, écrasé de pomme de terre iodée, émulsion yuzu|js},
-    {js|Filet de veau rôti, petits pois, morilles, jus court ...|js},
-    {js|Entremet chocolat-café, crème glacée au Baileys|js}
+    {js|L’araignée de mer, crémeuse et iodée|js},
+    {js|Merlan de ligne, champagne et asperges blanches|js},
+    {js|Magret de canard, carottes nouvelles et jus court comme une vinaigrette|js},
+    {js|Les premières fraises et rhubarbes, crème glacée au poivre de Tasmanie|js}
   ],
   image: Some("louise_entree_2_600.jpg")
 };

@@ -4,7 +4,8 @@ type route =
   | Home
   | Chef
   | Menu
-  | Booking;
+  | Booking
+  | Voucher;
 
 type state = {route};
 
@@ -16,9 +17,11 @@ let mapUrlToRoute = (url: ReasonReact.Router.url) =>
   | [] => Home
   | ["chef"] => Chef
   | ["menus"] => Menu
+  | ["bon-cadeau"] => Voucher
   | ["reservations"] => Booking
   | ["louise-website", "chef"] => Chef
   | ["louise-website", "menus"] => Menu
+  | ["louise-website", "bon-cadeau"] => Voucher
   | ["louise-website", "reservations"] => Booking
   | _ => Home
   };
@@ -46,6 +49,7 @@ let make = (_children) => {
       | Home => <HomePage />
       | Chef => <ChefPage />
       | Menu => <Menu />
+      | Voucher => <Voucher />
       | Booking => <Booking />
       };
     let menuColor = if (self.state.route === Home) {

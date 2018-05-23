@@ -37,7 +37,7 @@ let passion = {
   title: {js|Coffret Passion|js},
   price: 270,
   elements: [
-    {js|Deux coupes de champagne|js},
+    {js|Une bouteille de champagne Jacqueson|js},
     {js|Deux menus Tadorne|js}
   ]
 };

@@ -8,7 +8,7 @@ let make = (_children) =>
       <h2 className="title">{ReasonReact.stringToElement("Nos Bons Cadeaux")}</h2>
       <div className="description">
         {ReasonReact.stringToElement(
-          "Contactez nous pour offrir l'un de nos coffrets, ou composer le votre."
+          "Contactez nous pour offrir l'un de nos coffrets, ou composez le votre."
         )}
       </div>
       (

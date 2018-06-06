@@ -11,14 +11,28 @@ let make = (_children) =>
           "Contactez nous pour offrir l'un de nos coffrets, ou composez le votre."
         )}
       </div>
-      (
-        ReasonReact.arrayToElement(Array.of_list(
-          List.map(
-            (voucher: Vouchers.voucher) => <VoucherItem voucher=voucher key={voucher.title} />,
-            Vouchers.vouchers
+      <div className="list">
+        <div className="first-list">
+          (
+            ReasonReact.arrayToElement(Array.of_list(
+              List.map(
+                (voucher: Vouchers.voucher) => <VoucherItem voucher=voucher key={voucher.title} />,
+                Vouchers.firstVouchers
+              )
+            ))
           )
-        ))
-      )
+        </div>
+        <div className="second-list">
+          (
+            ReasonReact.arrayToElement(Array.of_list(
+              List.map(
+                (voucher: Vouchers.voucher) => <VoucherItem voucher=voucher key={voucher.title} />,
+                Vouchers.secondVouchers
+              )
+            ))
+          )
+        </div>
+      </div>
     </div>
   }
 };

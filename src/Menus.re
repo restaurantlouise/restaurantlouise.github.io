@@ -3,7 +3,6 @@ type menu = {
   price: int,
   condition: option(string),
   elements: list(string),
-  image: option(string)
 };
 
 let marche = {
@@ -11,7 +10,6 @@ let marche = {
   price: 25,
   condition: Some({js|(Midi uniquement, hors week-end et jours fériés)|js}),
   elements: [{js|Entrée • Plat • Dessert|js}],
-  image: Some("louise_plat_2_600.jpg")
 };
 
 let issole = {
@@ -23,7 +21,6 @@ let issole = {
     {js|Magret de canard, carottes nouvelles et jus court comme une vinaigrette|js},
     {js|Les premières fraises et rhubarbes, crème glacée au poivre de Tasmanie|js}
   ],
-  image: Some("louise_dessert_2_600.jpg")
 };
 
 let tadorne = {
@@ -36,7 +33,6 @@ let tadorne = {
     {js|Magret de canard, carottes nouvelles et jus court comme une vinaigrette|js},
     {js|Les premières fraises et rhubarbes, crème glacée au poivre de Tasmanie|js}
   ],
-  image: Some("louise_entree_2_600.jpg")
 };
 
 let menus : list(menu) = [

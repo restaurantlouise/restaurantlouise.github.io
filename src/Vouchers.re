@@ -64,11 +64,14 @@ let decouverte = {
   ]
 };
 
-let vouchers : list(voucher) = [
+let firstVouchers : list(voucher) = [
   marche,
   saveur,
   inspiration,
+];
+
+let secondVouchers : list(voucher) = [
   passion,
   degustation,
   decouverte
-]
+];

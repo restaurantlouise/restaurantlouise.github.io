@@ -27,3 +27,9 @@
     margin: 0 1em 0 1em;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .nav-link.home {
+    display: none;
+  }
+}

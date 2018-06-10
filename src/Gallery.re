@@ -23,20 +23,20 @@ let team_bw = requireAssetURI("./rsc/gallery/team_bw.jpg");
 let galleryRows = [
   [louise_exterieur, tablier, jus_court],
   [asparagus, julien_bw, interieur_depuis_rue],
-  [inside_from_kitchen, rhums, inside_blue],
+  [jop_cooking, interieur_table_closeup, bbq],
   [canapes, team_bw, dessert],
-  [jop_cooking, interieur_table_closeup, bbq]
+  [inside_from_kitchen, rhums, inside_blue]
 ];
 
 let make = (_children) => {
   ...component,
   render: (_self) => {
     <div className="gallery">
-      <h2 className="title">{ReasonReact.stringToElement("Gallerie")}</h2>
+      <h2 className="title">{ReasonReact.stringToElement("Galerie")}</h2>
       <div className="gallery-container">
         (
           ReasonReact.arrayToElement(Array.of_list(
-            List.map((galleryRow) => <GalleryRow pictures={galleryRow} />
+            List.map((galleryRow) => <GalleryRow pictures={galleryRow} key={List.hd(galleryRow)}/>
             , galleryRows)
           ))
         )

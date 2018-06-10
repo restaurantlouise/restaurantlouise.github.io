@@ -18,12 +18,12 @@ let mapUrlToRoute = (url: ReasonReact.Router.url) =>
   | [] => Home
   | ["chef"] => Chef
   | ["menus"] => Menu
-  | ["gallerie"] => Gallery
+  | ["galerie"] => Gallery
   | ["bon-cadeau"] => Voucher
   | ["reservations"] => Booking
   | ["louise-website", "chef"] => Chef
   | ["louise-website", "menus"] => Menu
-  | ["louise-website", "gallerie"] => Gallery
+  | ["louise-website", "galerie"] => Gallery
   | ["louise-website", "bon-cadeau"] => Voucher
   | ["louise-website", "reservations"] => Booking
   | _ => Home

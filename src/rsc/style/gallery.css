@@ -1,0 +1,14 @@
+.gallery {
+  display: flex;
+  margin-top: 3em;
+  margin-bottom: 6em;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Economica",Arial,Helvetica,sans-serif;
+}
+
+.gallery > .title {
+  font-size: 3em;
+  margin-bottom: .3em;
+  margin-top: .3em;
+}

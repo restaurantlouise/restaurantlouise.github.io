@@ -17,9 +17,9 @@ let issole = {
   price: 55,
   condition: None,
   elements: [
-    {js|L’araignée de mer, crémeuse et iodée|js},
-    {js|Magret de canard, carottes nouvelles et jus court comme une vinaigrette|js},
-    {js|Les premières fraises et rhubarbes, crème glacée au poivre de Tasmanie|js}
+    {js|Dorade royale façon tataki, roquette et huître, yuzu en condiment|js},
+    {js|Canon d’agneau rôti au thym, caviar d’aubergine crémeux, courgettes au barbecue|js},
+    {js|Pavlova pêche blanche et estragon|js}
   ],
 };
 
@@ -28,10 +28,10 @@ let tadorne = {
   price: 85,
   condition: None,
   elements: [
-    {js|L’araignée de mer, crémeuse et iodée|js},
-    {js|Merlan de ligne, champagne et asperges blanches|js},
-    {js|Magret de canard, carottes nouvelles et jus court comme une vinaigrette|js},
-    {js|Les premières fraises et rhubarbes, crème glacée au poivre de Tasmanie|js}
+    {js|Dorade royale façon tataki, roquette et huître, yuzu en condiment|js},
+    {js|Bar de ligne confit à l’huile d’olive vierge, raviole épinard ricotta, bouillon au parfum de citronnelle|js},
+    {js|Canon d’agneau rôti au thym, caviar d’aubergine crémeux, courgettes au barbecue|js},
+    {js|Pavlova pêche blanche et estragon|js}
   ],
 };
 

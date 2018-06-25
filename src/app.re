@@ -2,7 +2,6 @@
 
 type route =
   | Home
-  | Chef
   | Menu
   | Gallery
   | Booking
@@ -16,12 +15,10 @@ type action =
 let mapUrlToRoute = (url: ReasonReact.Router.url) =>
   switch url.path {
   | [] => Home
-  | ["chef"] => Chef
   | ["menus"] => Menu
   | ["galerie"] => Gallery
   | ["bon-cadeau"] => Voucher
   | ["reservations"] => Booking
-  | ["louise-website", "chef"] => Chef
   | ["louise-website", "menus"] => Menu
   | ["louise-website", "galerie"] => Gallery
   | ["louise-website", "bon-cadeau"] => Voucher
@@ -50,7 +47,6 @@ let make = (_children) => {
     let pageDisplayed =
       switch (self.state.route) {
       | Home => <HomePage />
-      | Chef => <ChefPage />
       | Menu => <Menu />
       | Gallery => <Gallery />
       | Voucher => <Voucher />

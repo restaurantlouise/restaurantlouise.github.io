@@ -18,7 +18,7 @@ let issole = {
   condition: None,
   elements: [
     {js|Dorade royale façon tataki, roquette et huître, yuzu en condiment|js},
-    {js|Canon d’agneau rôti au thym, caviar d’aubergine crémeux, courgettes au barbecue|js},
+    {js|Bar de ligne confit à l’huile d’olive vierge, raviole épinard ricotta, bouillon au parfum de citronnelle|js},
     {js|Pavlova pêche blanche et estragon|js}
   ],
 };

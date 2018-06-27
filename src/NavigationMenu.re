@@ -23,6 +23,15 @@ let make = (~menuColor, _children) => {
         <span className="nav-link">
           <Link href="reservations" color=menuColor>{ReasonReact.stringToElement({js|Réservations|js})}</Link>
         </span>
+        <span className="nav-link">
+          <Link
+            href="https://www.hdmedia.fr/visite-virtuelle/hd/cbpXkpuRr-restaurant-louise.html"
+            color=menuColor
+            target="_blank"
+          >
+            {ReasonReact.stringToElement({js|Visite Virtuelle|js})}
+          </Link>
+        </span>
       </div>
       <div className="mobile-container">
         <NavigationMenuMobile menuColor=menuColor/>

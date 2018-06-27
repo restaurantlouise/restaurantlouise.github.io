@@ -5,19 +5,22 @@ let make = (~menuColor, _children) => {
   render: (_self) => {
     <div className="navigation-menu">
       <div className="desktop-container">
-        <span className="nav-link home">
+        <span className="nav-link">
           <Link href="home" color=menuColor>{ReasonReact.stringToElement("Accueil")}</Link>
         </span>
-        <span className="nav-link menu">
+        <span className="nav-link">
           <Link href="menus" color=menuColor>{ReasonReact.stringToElement("Les Menus")}</Link>
         </span>
-        <span className="nav-link menu">
+        <span className="nav-link">
+          <Link href="chef" color=menuColor>{ReasonReact.stringToElement("Le Chef")}</Link>
+        </span>
+        <span className="nav-link">
           <Link href="galerie" color=menuColor>{ReasonReact.stringToElement("Galerie")}</Link>
         </span>
-        <span className="nav-link menu">
+        <span className="nav-link">
           <Link href="bon-cadeau" color=menuColor>{ReasonReact.stringToElement("Bon Cadeau")}</Link>
         </span>
-        <span className="nav-link booking">
+        <span className="nav-link">
           <Link href="reservations" color=menuColor>{ReasonReact.stringToElement({js|Réservations|js})}</Link>
         </span>
       </div>

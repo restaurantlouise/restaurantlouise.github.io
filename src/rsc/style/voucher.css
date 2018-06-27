@@ -7,8 +7,10 @@
 }
 
 .vouchers > .title {
+  font-family: "Tangerine",Arial, Helvetica, sans-serif;
   font-size: 3em;
   margin-bottom: .3em;
+  color: #02022b;
   margin-top: .3em;
 }
 

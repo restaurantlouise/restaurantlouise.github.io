@@ -4,24 +4,22 @@ let make = (~menuColor, _children) => {
   ...component,
   render: (_self) => {
     <div className="navigation-menu">
-      <span className="nav-link home">
-        <Link href="home" color=menuColor>{ReasonReact.stringToElement("Accueil")}</Link>
-      </span>
-      /* <span className="nav-link chef">
-        <Link href="chef">{ReasonReact.stringToElement("Le Chef")}</Link>
-      </span> */
-      <span className="nav-link menu">
-        <Link href="menus" color=menuColor>{ReasonReact.stringToElement("Les Menus")}</Link>
-      </span>
-      <span className="nav-link menu">
-        <Link href="galerie" color=menuColor>{ReasonReact.stringToElement("Galerie")}</Link>
-      </span>
-      <span className="nav-link menu">
-        <Link href="bon-cadeau" color=menuColor>{ReasonReact.stringToElement("Bon Cadeau")}</Link>
-      </span>
-      <span className="nav-link booking">
-        <Link href="reservations" color=menuColor>{ReasonReact.stringToElement({js|Réservations|js})}</Link>
-      </span>
+      <div className="desktop-container">
+        (
+          ReasonReact.arrayToElement(Array.of_list(
+            List.map((link: NavigationMenuLinks.link) => {
+              <span className="nav-link" key={link.title}>
+                <Link href={link.href} color=menuColor target={link.target}>
+                  {ReasonReact.stringToElement(link.title)}
+                </Link>
+              </span>
+            }, NavigationMenuLinks.links)
+          ))
+        )
+      </div>
+      <div className="mobile-container">
+        <NavigationMenuMobile menuColor=menuColor/>
+      </div>
     </div>
   }
 };

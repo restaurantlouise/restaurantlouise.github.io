@@ -1,6 +1,5 @@
 .gallery {
   display: flex;
-  margin-top: 3em;
   margin-bottom: 6em;
   align-items: center;
   flex-direction: column;
@@ -9,7 +8,9 @@
 
 .gallery > .title {
   font-size: 3em;
+  font-family: "Tangerine",Arial, Helvetica, sans-serif;
   margin-bottom: .3em;
+  color: #02022b;
   margin-top: .3em;
 }
 

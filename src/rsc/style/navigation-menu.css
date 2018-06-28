@@ -7,7 +7,7 @@
 .desktop-container, .mobile-container {
   z-index: 1;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 900px) {
   .navigation-menu {
     justify-content: flex-end;
   }
@@ -50,8 +50,13 @@
   position: absolute;
   width: 3em;
   height: 0.45em;
-  border-top: 1.4em double #000;
-  border-bottom: 0.45em solid #000;
+  border-top: 1.4em double #02022b;
+  border-bottom: 0.45em solid #02022b;
+}
+
+.menu-btn.on-home:before {
+  border-top: 1.4em double white;
+  border-bottom: 0.45em solid white;
 }
 
 .navigation-menu-mobile {
@@ -70,12 +75,17 @@
   justify-content: center;
   width: 14em;
   height: 3.2em;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .9);
   border-bottom: 1px solid black;
 }
 
-.mobile-link:first-of-type {
-  border-top: 1px solid black;
+.mobile-link.on-home {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1px solid white;
+}
+
+.mobile-link:last-of-type {
+  border-bottom: none;
 }
 
 .mobile-link a {

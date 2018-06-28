@@ -5,33 +5,17 @@ let make = (~menuColor, _children) => {
   render: (_self) => {
     <div className="navigation-menu">
       <div className="desktop-container">
-        <span className="nav-link">
-          <Link href="home" color=menuColor>{ReasonReact.stringToElement("Accueil")}</Link>
-        </span>
-        <span className="nav-link">
-          <Link href="menus" color=menuColor>{ReasonReact.stringToElement("Les Menus")}</Link>
-        </span>
-        <span className="nav-link">
-          <Link href="chef" color=menuColor>{ReasonReact.stringToElement("Le Chef")}</Link>
-        </span>
-        <span className="nav-link">
-          <Link href="galerie" color=menuColor>{ReasonReact.stringToElement("Galerie")}</Link>
-        </span>
-        <span className="nav-link">
-          <Link href="bon-cadeau" color=menuColor>{ReasonReact.stringToElement("Bon Cadeau")}</Link>
-        </span>
-        <span className="nav-link">
-          <Link href="reservations" color=menuColor>{ReasonReact.stringToElement({js|Réservations|js})}</Link>
-        </span>
-        <span className="nav-link">
-          <Link
-            href="https://www.hdmedia.fr/visite-virtuelle/hd/cbpXkpuRr-restaurant-louise.html"
-            color=menuColor
-            target="_blank"
-          >
-            {ReasonReact.stringToElement({js|Visite Virtuelle|js})}
-          </Link>
-        </span>
+        (
+          ReasonReact.arrayToElement(Array.of_list(
+            List.map((link: NavigationMenuLinks.link) => {
+              <span className="nav-link" key={link.title}>
+                <Link href={link.href} color=menuColor target={link.target}>
+                  {ReasonReact.stringToElement(link.title)}
+                </Link>
+              </span>
+            }, NavigationMenuLinks.links)
+          ))
+        )
       </div>
       <div className="mobile-container">
         <NavigationMenuMobile menuColor=menuColor/>

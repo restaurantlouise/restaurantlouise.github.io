@@ -25,33 +25,17 @@ let make = (~menuColor, _children) => {
           <div
             className="navigation-menu-mobile"
           >
-            <div className="mobile-link">
-              <Link href="home" color=menuColor>{ReasonReact.stringToElement("Accueil")}</Link>
-            </div>
-            <div className="mobile-link">
-              <Link href="menus" color=menuColor>{ReasonReact.stringToElement("Les Menus")}</Link>
-            </div>
-            <div className="mobile-link">
-              <Link href="chef" color=menuColor>{ReasonReact.stringToElement("Le Chef")}</Link>
-            </div>
-            <div className="mobile-link">
-              <Link href="galerie" color=menuColor>{ReasonReact.stringToElement("Galerie")}</Link>
-            </div>
-            <div className="mobile-link">
-              <Link href="bon-cadeau" color=menuColor>{ReasonReact.stringToElement("Bon Cadeau")}</Link>
-            </div>
-            <div className="mobile-link">
-              <Link href="reservations" color=menuColor>{ReasonReact.stringToElement({js|Réservations|js})}</Link>
-            </div>
-            <div className="mobile-link">
-              <Link
-                href="https://www.hdmedia.fr/visite-virtuelle/hd/cbpXkpuRr-restaurant-louise.html"
-                color=menuColor
-                target="_blank"
-              >
-                {ReasonReact.stringToElement({js|Visite Virtuelle|js})}
-              </Link>
-            </div>
+            (
+              ReasonReact.arrayToElement(Array.of_list(
+                List.map((link: NavigationMenuLinks.link) => {
+                  <div className="mobile-link" key={link.title}>
+                    <Link href={link.href} color=menuColor target={link.target}>
+                      {ReasonReact.stringToElement(link.title)}
+                    </Link>
+                  </div>
+                }, NavigationMenuLinks.links)
+              ))
+            )
           </div>
           <div className="overlay" onClick={(_) => self.send(Toggle)} />
         </div>

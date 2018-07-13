@@ -1,7 +1,7 @@
 [@bs.val] external requireAssetURI : string => string = "require";
 
-let fbIcon = requireAssetURI("./rsc/fb_icon.png");
-let instaIcon = requireAssetURI("./rsc/insta_icon.png");
+let fbIcon = requireAssetURI("./rsc/fb_icon.svg");
+let instaIcon = requireAssetURI("./rsc/instagram.svg");
 
 let component = ReasonReact.statelessComponent("Social");
 

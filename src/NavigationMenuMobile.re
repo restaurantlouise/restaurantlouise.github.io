@@ -17,7 +17,7 @@ let make = (~menuColor, _children) => {
   render: (self) => {
     <div>
       <div
-        className={"menu-btn" ++ (menuColor == "white" ? " on-home" : "")}
+        className="menu-btn"
         onClick={(_) => self.send(Toggle)}
       />
       {self.state.showMenu ?
@@ -29,7 +29,7 @@ let make = (~menuColor, _children) => {
               ReasonReact.arrayToElement(Array.of_list(
                 List.map((link: NavigationMenuLinks.link) => {
                   <div
-                    className={"mobile-link" ++ (menuColor == "white" ? " on-home" : "")}
+                    className="mobile-link"
                     onClick={(_) => self.send(Toggle)}
                     key={link.title}
                   >

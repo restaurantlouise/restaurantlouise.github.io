@@ -21,3 +21,8 @@
 body .App {
   font-family: "Tangerine",Arial, Helvetica, sans-serif
 }
+
+body {
+  background-color: #02022b;
+  color: #efe6cb;
+}

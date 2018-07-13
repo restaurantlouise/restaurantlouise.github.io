@@ -56,11 +56,7 @@ let make = (_children) => {
       | Voucher => <Voucher />
       | Booking => <Booking />
       };
-    let menuColor = if (self.state.route === Home) {
-      "white"
-    } else {
-      "#02022b"
-    };
+    let menuColor = "#efe6cb";
 
     <div className="App">
       <NavigationMenu menuColor=menuColor/>

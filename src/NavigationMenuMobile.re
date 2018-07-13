@@ -28,8 +28,16 @@ let make = (~menuColor, _children) => {
             (
               ReasonReact.arrayToElement(Array.of_list(
                 List.map((link: NavigationMenuLinks.link) => {
-                  <div className={"mobile-link" ++ (menuColor == "white" ? " on-home" : "")} key={link.title}>
-                    <Link href={link.href} color=menuColor target={link.target}>
+                  <div
+                    className={"mobile-link" ++ (menuColor == "white" ? " on-home" : "")}
+                    onClick={(_) => self.send(Toggle)}
+                    key={link.title}
+                  >
+                    <Link
+                      href={link.href}
+                      color=menuColor
+                      target={link.target}
+                    >
                       {ReasonReact.stringToElement(link.title)}
                     </Link>
                   </div>

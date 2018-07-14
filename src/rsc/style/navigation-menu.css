@@ -50,8 +50,8 @@
   position: absolute;
   width: 3em;
   height: 0.45em;
-  border-top: 1.4em double #efe6cb;
-  border-bottom: 0.45em solid #efe6cb;
+  border-top: 1.4em double white;
+  border-bottom: 0.45em solid white;
 }
 
 .navigation-menu-mobile {
@@ -71,7 +71,7 @@
   width: 14em;
   height: 3.2em;
   background-color: rgba(2, 2, 43, .75);
-  border-bottom: 1px solid #efe6cb;
+  border-bottom: 1px solid white;
 }
 
 .mobile-link:last-of-type {

@@ -56,7 +56,7 @@ let make = (_children) => {
       | Voucher => <Voucher />
       | Booking => <Booking />
       };
-    let menuColor = "#efe6cb";
+    let menuColor = "white";
 
     <div className="App">
       <NavigationMenu menuColor=menuColor/>

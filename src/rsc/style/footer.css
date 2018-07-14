@@ -1,7 +1,7 @@
 .footer {
   font-family: "Economica",Arial,Helvetica,sans-serif;
   display: flex;
-  background-color: #efe6cb;
+  background-color: white;
   color: #02022b;
   justify-content: space-around;
   position: fixed;

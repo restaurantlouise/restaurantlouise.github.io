@@ -35,8 +35,19 @@ let tadorne = {
   ],
 };
 
+let homard = {
+  title: {js|Homard|js},
+  price: 90,
+  condition: Some({js|Réservation 48 heures à l’avance au 0297847212|js}),
+  elements: [
+    {js|Menu en cinq étapes autour de notre homard breton|js},
+    {js|Accord mets vins possible pour 115 €|js}
+  ],
+};
+
 let menus : list(menu) = [
   marche,
   issole,
-  tadorne
+  tadorne,
+  homard
 ]

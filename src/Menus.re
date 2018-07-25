@@ -15,23 +15,23 @@ let marche = {
 let issole = {
   title: {js|Issole|js},
   price: 55,
-  condition: None,
+  condition: Some({js|Laissez-vous tenter par le homard de nos côtes servi en cocotte (supplément 30 € par personne)|js}),
   elements: [
-    {js|Dorade royale façon tataki, roquette et huître, yuzu en condiment|js},
-    {js|Bar de ligne confit à l’huile d’olive vierge, raviole épinard ricotta, bouillon au parfum de citronnelle|js},
-    {js|Pavlova pêche blanche et estragon|js}
+    {js|Bar de ligne en carpaccio, nectarine et dulse|js},
+    {js|Médaillon de lotte au satay, noire de crimée rôtie et nage d’épices|js},
+    {js|Fruits rouges et sangria au parfum de reine des prés|js}
   ],
 };
 
 let tadorne = {
   title: {js|Tadorne|js},
   price: 85,
-  condition: None,
+  condition: Some({js|Laissez-vous tenter par le homard de nos côtes servi en cocotte (supplément 30 € par personne)|js}),
   elements: [
-    {js|Dorade royale façon tataki, roquette et huître, yuzu en condiment|js},
-    {js|Bar de ligne confit à l’huile d’olive vierge, raviole épinard ricotta, bouillon au parfum de citronnelle|js},
-    {js|Canon d’agneau rôti au thym, caviar d’aubergine crémeux, courgettes au barbecue|js},
-    {js|Pavlova pêche blanche et estragon|js}
+    {js|Bar de ligne en carpaccio, nectarine et dulse|js},
+    {js|Médaillon de lotte au satay, noire de crimée rôtie et nage d’épices|js},
+    {js|Morceau choisi dans le bœuf, panis snacké, jus travaillé comme une daube|js},
+    {js|Fruits rouges et sangria au parfum de reine des prés|js}
   ],
 };
 

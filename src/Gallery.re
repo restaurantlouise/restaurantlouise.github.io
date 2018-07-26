@@ -41,6 +41,11 @@ let make = (_children) => {
           ))
         )
       </div>
+      <div className="gallery-credentials">
+        <Link href="http://www.marni-spring.com" color="white" target="_blank">
+          {ReasonReact.stringToElement("Photographies de Marni Spring")}
+        </Link>
+      </div>
     </div>
   }
 };

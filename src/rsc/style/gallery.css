@@ -16,6 +16,7 @@
 .gallery-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.5em;
 }
 
 .gallery-row {
@@ -36,4 +37,9 @@
   .gallery-row {
     flex-direction: row;
   }
+}
+
+.gallery-credentials > a {
+  text-decoration: none;
+  font-size: 1.1em;
 }

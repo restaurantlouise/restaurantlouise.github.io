@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "bs-jest": "^0.3.2",
+    "bs-platform": "3.0.0",
     "gh-pages": "^1.1.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
@@ -11,7 +11,10 @@
     "reason-scripts": "0.8.0"
   },
   "homepage": "http://www.restaurantlouise.fr",
-  "dependencies": {},
+  "dependencies": {
+    "@glennsl/bs-json": "2.0.0",
+    "bs-fetch": "^0.3.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -3,29 +3,38 @@
 
 let component = ReasonReact.statelessComponent("Gallery");
 
-let asparagus = requireAssetURI("./rsc/gallery/asperges.jpg");
-let bbq = requireAssetURI("./rsc/gallery/bbq.jpg");
-let canapes = requireAssetURI("./rsc/gallery/canapes.jpg");
-let glasses = requireAssetURI("./rsc/gallery/closeup.jpg");
-let jop_cooking = requireAssetURI("./rsc/gallery/cuisine.jpg");
-let dessert = requireAssetURI("./rsc/gallery/dessert.jpg");
-let inside_blue = requireAssetURI("./rsc/gallery/interieur_bleu.jpg");
-let inside_from_kitchen = requireAssetURI("./rsc/gallery/interieur_depuis_cuisine.jpg");
-let interieur_depuis_rue = requireAssetURI("./rsc/gallery/interieur_depuis_rue.jpg");
-let interieur_table_closeup = requireAssetURI("./rsc/gallery/interieur_table_closeup.jpg");
-let julien_bw = requireAssetURI("./rsc/gallery/julien_bw.jpg");
-let jus_court = requireAssetURI("./rsc/gallery/jus_court.jpg");
-let louise_exterieur = requireAssetURI("./rsc/gallery/louise_exterieur.jpg");
-let rhums = requireAssetURI("./rsc/gallery/rhums.jpg");
+let table_bw = requireAssetURI("./rsc/gallery/table_bw.jpg");
+let couple = requireAssetURI("./rsc/gallery/couple.jpg");
+let mignardises = requireAssetURI("./rsc/gallery/mignardises.jpg");
+
+let brochettes = requireAssetURI("./rsc/gallery/brochettes.jpg");
+let table_plante = requireAssetURI("./rsc/gallery/table_plante.jpg");
 let tablier = requireAssetURI("./rsc/gallery/tablier.jpg");
-let team_bw = requireAssetURI("./rsc/gallery/team_bw.jpg");
+
+let dessert = requireAssetURI("./rsc/gallery/dessert.jpg");
+let julien_bw = requireAssetURI("./rsc/gallery/julien_bw.jpg");
+let table = requireAssetURI("./rsc//gallery/table.jpg");
+
+let four = requireAssetURI("./rsc/gallery/four.jpg");
+let plate_black_green = requireAssetURI("./rsc/gallery/plate_black_green.jpg");
+let salle_bw = requireAssetURI("./rsc/gallery/salle_bw.jpg");
+
+let bbq = requireAssetURI("./rsc/gallery/bbq.jpg");
+let gold = requireAssetURI("./rsc/gallery/gold.jpg");
+let jop_bw = requireAssetURI("./rsc/gallery/jop_bw.jpg");
+
+let plate_stjacques = requireAssetURI("./rsc/gallery/plate_stjacques.jpg");
+let stjacques = requireAssetURI("./rsc/gallery/stjacques.jpg");
+let table_solo_bw = requireAssetURI("./rsc/gallery/table_solo_bw.jpg");
+
 
 let galleryRows = [
-  [louise_exterieur, tablier, jus_court],
-  [asparagus, julien_bw, interieur_depuis_rue],
-  [jop_cooking, interieur_table_closeup, bbq],
-  [canapes, team_bw, dessert],
-  [inside_from_kitchen, rhums, inside_blue]
+  [table_plante, couple, plate_black_green],
+  [brochettes, table_solo_bw, stjacques],
+  [jop_bw, dessert, tablier],
+  [four, table_bw, bbq],
+  [julien_bw, plate_stjacques, gold],
+  [table, mignardises, salle_bw]
 ];
 
 let make = (_children) => {

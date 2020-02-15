@@ -1,26 +1,18 @@
-[@bs.val] external requireAssetURI : string => string = "require";
+[@bs.val] external requireAssetURI: string => string = "require";
 
 let lechef = requireAssetURI("./rsc/le_chef.jpg");
 
-let component = ReasonReact.statelessComponent("Chef");
-
-let make = (_children) => {
-  ...component,
-  render: (_self) => {
+[@react.component]
+let make = () => {
     <div className="chef-container">
       <div className="pic">
-        <img
-          alt="photo du chef"
-          className="chef-pic"
-          src=lechef
-        />
+        <img alt="photo du chef" className="chef-pic" src=lechef />
       </div>
       <div className="description">
-        <h3 className="title">{ReasonReact.stringToElement("Le chef")}</h3>
-        <div className="item">{ReasonReact.stringToElement(ChefTexts.intro)}</div>
-        <div className="item">{ReasonReact.stringToElement(ChefTexts.academics)}</div>
-        <div className="item">{ReasonReact.stringToElement(ChefTexts.whatIsLouise)}</div>
+        <h3 className="title"> {React.string("Le chef")} </h3>
+        <div className="item"> {React.string(ChefTexts.intro)} </div>
+        <div className="item"> {React.string(ChefTexts.academics)} </div>
+        <div className="item"> {React.string(ChefTexts.whatIsLouise)} </div>
       </div>
-    </div>
-  }
+    </div>;
 };

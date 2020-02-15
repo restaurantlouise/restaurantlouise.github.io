@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "bs-platform": "3.0.0",
-    "gh-pages": "^1.1.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "reason-react": "^0.3.4",
-    "reason-scripts": "0.8.0"
+    "bs-platform": "7.1.1",
+    "gh-pages": "^2.2.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "reason-react": "^0.7.0",
+    "reason-scripts": "1.0.0"
   },
   "homepage": "http://www.restaurantlouise.fr",
   "dependencies": {
-    "@glennsl/bs-json": "2.0.0",
-    "bs-fetch": "^0.3.0"
+    "@glennsl/bs-json": "5.0.2",
+    "bs-fetch": "^0.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,5 +23,11 @@
     "prepare": "npm link bs-platform",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build -b master"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

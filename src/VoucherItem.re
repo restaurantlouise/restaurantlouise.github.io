@@ -1,22 +1,30 @@
-[@bs.val] external requireAssetURI : string => string = "require";
+[@bs.val] external requireAssetURI: string => string = "require";
 
-let component = ReasonReact.statelessComponent("VoucherItem");
+[@react.component]
+let make = (~voucher:Vouchers.voucher) => {
 
-let make = (~voucher: Vouchers.voucher, _children) =>
-  {
-    ...component,
-    render: (_self) => {
-      <div className={"voucher " ++ String.lowercase(voucher.title)}>
-        <h3 className="title">{ReasonReact.stringToElement(
-          voucher.title ++ {js| • |js} ++ string_of_int(voucher.price) ++ {js|€|js}
-        )}</h3>
-        (
-          ReasonReact.arrayToElement(Array.of_list(
-            List.map((item) => <div key=item className="voucher-element">
-              {ReasonReact.stringToElement(item)}
-            </div>, voucher.elements)
-          ))
-        )
-      </div>
-    }
-  };
+// };
+// [@react.component]
+// let make = (~voucher: Vouchers.voucher) => {
+  <div className={"voucher " ++ String.lowercase_ascii(voucher.title)}>
+    <h3 className="title">
+      {React.string(
+         voucher.title
+         ++ {js| • |js}
+         ++ string_of_int(voucher.price)
+         ++ {js|€|js},
+       )}
+    </h3>
+    {React.array(
+       Array.of_list(
+         List.map(
+           item =>
+             <div key=item className="voucher-element">
+               {React.string(item)}
+             </div>,
+           voucher.elements,
+         ),
+       ),
+     )}
+  </div>;
+};

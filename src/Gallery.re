@@ -1,7 +1,4 @@
-
-[@bs.val] external requireAssetURI : string => string = "require";
-
-let component = ReasonReact.statelessComponent("Gallery");
+[@bs.val] external requireAssetURI: string => string = "require";
 
 let table_bw = requireAssetURI("./rsc/gallery/table_bw.jpg");
 let couple = requireAssetURI("./rsc/gallery/couple.jpg");
@@ -16,7 +13,8 @@ let julien_bw = requireAssetURI("./rsc/gallery/julien_bw.jpg");
 let table = requireAssetURI("./rsc//gallery/table.jpg");
 
 let four = requireAssetURI("./rsc/gallery/four.jpg");
-let plate_black_green = requireAssetURI("./rsc/gallery/plate_black_green.jpg");
+let plate_black_green =
+  requireAssetURI("./rsc/gallery/plate_black_green.jpg");
 let salle_bw = requireAssetURI("./rsc/gallery/salle_bw.jpg");
 
 let bbq = requireAssetURI("./rsc/gallery/bbq.jpg");
@@ -27,34 +25,34 @@ let plate_stjacques = requireAssetURI("./rsc/gallery/plate_stjacques.jpg");
 let stjacques = requireAssetURI("./rsc/gallery/stjacques.jpg");
 let table_solo_bw = requireAssetURI("./rsc/gallery/table_solo_bw.jpg");
 
-
 let galleryRows = [
   [table_plante, couple, plate_black_green],
   [brochettes, table_solo_bw, stjacques],
   [jop_bw, dessert, tablier],
   [four, table_bw, bbq],
   [julien_bw, plate_stjacques, gold],
-  [table, mignardises, salle_bw]
+  [table, mignardises, salle_bw],
 ];
 
-let make = (_children) => {
-  ...component,
-  render: (_self) => {
-    <div className="gallery">
-      <h2 className="title">{ReasonReact.stringToElement("Galerie")}</h2>
-      <div className="gallery-container">
-        (
-          ReasonReact.arrayToElement(Array.of_list(
-            List.map((galleryRow) => <GalleryRow pictures={galleryRow} key={List.hd(galleryRow)}/>
-            , galleryRows)
-          ))
-        )
-      </div>
-      <div className="gallery-credentials">
-        <Link href="http://www.marni-spring.com" color="white" target="_blank">
-          {ReasonReact.stringToElement("Photographies de Marni Spring")}
-        </Link>
-      </div>
+[@react.component]
+let make = () => {
+  <div className="gallery">
+    <h2 className="title"> {React.string("Galerie")} </h2>
+    <div className="gallery-container">
+      {React.array(
+         Array.of_list(
+           List.map(
+             galleryRow =>
+               <GalleryRow pictures=galleryRow key={List.hd(galleryRow)} />,
+             galleryRows,
+           ),
+         ),
+       )}
     </div>
-  }
+    <div className="gallery-credentials">
+      <Link href="http://www.marni-spring.com" color="white" target="_blank">
+        {React.string("Photographies de Marni Spring")}
+      </Link>
+    </div>
+  </div>;
 };

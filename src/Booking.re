@@ -1,4 +1,3 @@
-let component = ReasonReact.statelessComponent("Booking");
 
 let timesTitle = "Horaires";
 let timesOpenDays = "Ouvert du mardi au samedi";
@@ -13,9 +12,8 @@ let addressCity = "56100 Lorient";
 let phoneTitle = {js|Réservations|js};
 let phoneNumber = {js|Par téléphone, au 02 97 84 72 12|js};
 
-let make = (_children) => {
-  ...component,
-  render: (_self) => {
+[@react.component]
+let make = () => {
     <div className="booking">
       <div className="times-address">
         <BookingItem
@@ -37,5 +35,4 @@ let make = (_children) => {
         />
       </div>
     </div>
-  }
 };

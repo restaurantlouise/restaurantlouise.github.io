@@ -1,53 +1,46 @@
 type action =
   | Toggle;
 
-type state = {
-  showMenu: bool
-};
+type state = {showMenu: bool};
 
-let component = ReasonReact.reducerComponent("NavigationMenuMobile");
+let reducer = (state, action) =>
+  switch (action) {
+  | Toggle => {showMenu: !state.showMenu}
+  };
+let initialState = {showMenu: false};
 
-let make = (~menuColor, _children) => {
-  ...component,
-  initialState: () => {showMenu: false},
-  reducer: (action, state) =>
-    switch (action) {
-    | Toggle => ReasonReact.Update({showMenu: !state.showMenu})
-    },
-  render: (self) => {
-    <div>
-      <div
-        className="menu-btn"
-        onClick={(_) => self.send(Toggle)}
-      />
-      {self.state.showMenu ?
-        <div className="navigation-menu-mobile-container">
-          <div
-            className="navigation-menu-mobile"
-          >
-            (
-              ReasonReact.arrayToElement(Array.of_list(
-                List.map((link: NavigationMenuLinks.link) => {
-                  <div
-                    className="mobile-link"
-                    onClick={(_) => self.send(Toggle)}
-                    key={link.title}
-                  >
-                    <Link
-                      href={link.href}
-                      color=menuColor
-                      target={link.target}
-                    >
-                      {ReasonReact.stringToElement(link.title)}
-                    </Link>
-                  </div>
-                }, NavigationMenuLinks.links)
-              ))
-            )
-          </div>
-          <div className="overlay" onClick={(_) => self.send(Toggle)} />
-        </div>
-      : ReasonReact.nullElement}
-    </div>
-  }
+[@react.component]
+let make = (~menuColor) => {
+  let (state, dispatch) = React.useReducer(reducer, initialState);
+  <div>
+    <div className="menu-btn" onClick={_ => dispatch(Toggle)} />
+    {state.showMenu
+       ? <div className="navigation-menu-mobile-container">
+           <div className="navigation-menu-mobile">
+             {React.array(
+                Array.of_list(
+                  List.map(
+                    (link: NavigationMenuLinks.link) => {
+                      <div
+                        className="mobile-link"
+                        onClick={_ => dispatch(Toggle)}
+                        key={link.title}>
+                        <Link
+                          href={link.href}
+                          color=menuColor
+                          target={link.target}
+                          >
+                          {React.string(link.title)}
+                        </Link>
+                      </div>
+                    },
+                    NavigationMenuLinks.links,
+                  ),
+                ),
+              )}
+           </div>
+           <div className="overlay" onClick={_ => dispatch(Toggle)} />
+         </div>
+       : React.null}
+  </div>;
 };

@@ -3,11 +3,8 @@
 let fbIcon = requireAssetURI("./rsc/fb_icon.svg");
 let instaIcon = requireAssetURI("./rsc/instagram.svg");
 
-let component = ReasonReact.statelessComponent("Social");
-
-let make = (_children) => {
-  ...component,
-  render: (_self) => {
+[@react.component]
+let make = () => {
     <div className="social">
       <a href=("https://www.facebook.com/JulienCorderochRestaurantLouise/") target="_blank" className="fb-link">
         <div className="fb-icon-container">
@@ -20,5 +17,4 @@ let make = (_children) => {
         </div>
       </a>
     </div>
-  }
 };
